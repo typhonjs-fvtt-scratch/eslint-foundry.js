@@ -1,0 +1,36 @@
+{
+  "name": "@typhonjs-fvtt/eslint-foundry.js",
+  "version": "0.1.0",
+  "description": "Provides an ESLint config file defining all globals in foundry.js",
+  "homepage": "https://github.com/typhonjs-fvtt/eslint-foundry.js",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Leahy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-fvtt/eslint-foundry.js.git"
+  },
+  "maintainers": [
+    {
+      "name": "Michael Leahy",
+      "email": "fvtt@typhonjs.io",
+      "url": "https://github.com/typhonrt"
+    }
+  ],
+  "keywords": [
+    "typhonjs",
+    "foundry",
+    "fvtt",
+    "vtt",
+    "foundry.js",
+    "eslint"
+  ],
+  "files": [
+    ".eslintrc"
+  ],
+  "directories": {},
+  "bugs": {
+    "url": "https://github.com/typhonjs-fvtt/eslint-foundry.js/issues"
+  }
+}
