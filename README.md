@@ -36,9 +36,9 @@ Create a minimal `.eslintrc` file in the root path of a project.
 {
   "extends": "./node_modules/@typhonjs-fvtt/eslint-foundry.js/config/0.7.8/.eslintrc"
 
-  // Prevents overwriting any built in globals particularly from `@typhonjs-fvtt/eslint-foundry.js`, but also
-  // node & browser environments. `event / window.event` shadowing is allowed due to being a common variable name and
-  // an uncommonly used browser feature.
+  // Prevents overwriting any built in globals particularly from `@typhonjs-fvtt/eslint-foundry.js`. 
+  // `event / window.event` shadowing is allowed due to being a common variable name and an uncommonly used browser 
+  // feature.
   //
   // Note: if you are using Typescript you must use `@typescript-eslint/no-shadow`
   "rules": {
