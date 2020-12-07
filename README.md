@@ -46,3 +46,7 @@ Create a minimal `.eslintrc` file in the root path of a project.
   }
 }
 ```
+
+### Example IDE Integration
+
+![IDE Integration](https://imgur.com/eFI3shs.png)
