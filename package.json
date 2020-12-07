@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-fvtt/eslint-foundry.js",
-  "version": "0.1.0",
-  "description": "Provides an ESLint config file defining all globals in foundry.js",
+  "version": "0.2.0",
+  "description": "Provides ESLint config files defining all globals in foundry.js",
   "homepage": "https://github.com/typhonjs-fvtt/eslint-foundry.js",
   "license": "MIT",
   "author": {
@@ -18,6 +18,12 @@
       "url": "https://github.com/typhonrt"
     }
   ],
+  "devDependencies": {
+    "cross-env": "^7.0.0"
+  },
+  "scripts": {
+    "parse": "cross-env TARGET=0.7.8 node ./src/parseData.mjs"
+  },
   "keywords": [
     "typhonjs",
     "foundry",
@@ -27,7 +33,7 @@
     "eslint"
   ],
   "files": [
-    ".eslintrc"
+    "config"
   ],
   "directories": {},
   "bugs": {

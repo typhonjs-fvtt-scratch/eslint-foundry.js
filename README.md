@@ -3,12 +3,24 @@
 [![NPM](https://img.shields.io/npm/v/@typhonjs-fvtt/eslint-foundry.js?style=plastic)](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg?style=plastic)](https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/LICENSE)
 
+### Why:
 
-Provides a shared [ESLint](http://eslint.org/) configuration file for [Foundry VTT](https://foundryvtt.com) / [foundry.js](https://foundryvtt.com/api/foundry.js.html) version `0.7.8` containing all exported globals for module / system development. This configuration file is meant to be an add on to other configuration files of your choice as it only defines the `foundry.js` globals for use with directives like `no-shadow` or `@typescript-eslint/no-shadow` if you are using Typescript.
+This module provides shared [ESLint](http://eslint.org/) configuration files for [Foundry VTT](https://foundryvtt.com) / 
+[foundry.js](https://foundryvtt.com/api/foundry.js.html) containing all exported globals for module / system 
+development. This configuration file is designed as an addon to other configuration files of your choice as it 
+only defines the `foundry.js` globals for use with directives like `no-shadow` or `@typescript-eslint/no-shadow` if you 
+are using Typescript. Enable ESLint in your IDE of choice and feel relief that you are not overwriting any globals
+defined in `foundry.js`! 
 
-Please see the `.eslintrc` file in [demo-rollup-module](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc) for a complete example. 
+Please see the `.eslintrc` file in [demo-rollup-module](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc) 
+for a complete example. 
 
-To install:
+Latest version: 0.7.8
+
+All versions: 
+- 0.7.8
+
+### Installation:
 
 `npm install --save-dev @typhonjs-fvtt/eslint-foundry.js` or add to `package.json`.
 
@@ -18,14 +30,19 @@ Create a minimal `.eslintrc` file in the root path of a project.
 
 ```
 /**
- * Loads https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/.eslintrc
+ * Loads https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/config/0.7.8/.eslintrc
  * NPM: https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js
  */
 {
-   "extends": "./node_modules/@typhonjs-fvtt/eslint-foundry.js/.eslintrc"
+  "extends": "./node_modules/@typhonjs-fvtt/eslint-foundry.js/config/0.7.8/.eslintrc"
 
-   "rules": {
-      "no-shadow": ["error", { "builtinGlobals": true, "hoist": "all", "allow": [] }]
-   }
+  // Prevents overwriting any built in globals particularly from `@typhonjs-fvtt/eslint-foundry.js`, but also
+  // node & browser environments. `event / window.event` shadowing is allowed due to being a common variable name and
+  // an uncommonly used browser feature.
+  //
+  // Note: if you are using Typescript you must use `@typescript-eslint/no-shadow`
+  "rules": {
+    "no-shadow": ["error", { "builtinGlobals": true, "hoist": "all", "allow": ["event"] }]
+  }
 }
 ```
