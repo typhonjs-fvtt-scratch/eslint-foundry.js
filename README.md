@@ -30,11 +30,13 @@ Create a minimal `.eslintrc` file in the root path of a project.
 
 ```
 /**
- * Loads https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/config/0.7.8/.eslintrc
+ * Loads https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/config/latest/.eslintrc
  * NPM: https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js
+ *
+ * Note: specific versions are located in /config/<VERSION>/.eslintrc
  */
 {
-  "extends": "./node_modules/@typhonjs-fvtt/eslint-foundry.js/config/0.7.8/.eslintrc"
+  "extends": "./node_modules/@typhonjs-fvtt/eslint-foundry.js/config/latest/.eslintrc"
 
   // Prevents overwriting any built in globals particularly from `@typhonjs-fvtt/eslint-foundry.js`. 
   // `event / window.event` shadowing is allowed due to being a common variable name and an uncommonly used browser 
