@@ -3,6 +3,8 @@
 [![NPM](https://img.shields.io/npm/v/@typhonjs-fvtt/eslint-foundry.js?style=plastic)](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg?style=plastic)](https://github.com/typhonjs-fvtt/eslint-foundry.js/blob/main/LICENSE)
 
+WARNING: This repo and associated NPM module has been deprecated. Please switch to [typhonjs-fvtt/eslint-config-foundry.js](https://github.com/typhonjs-fvtt/eslint-config-foundry.js/). That NPM module has the latest support including Foundry VTT 0.8.x support. The reason for the deprecation is that the new module fully supports [ESLint shareable configs](https://eslint.org/docs/developer-guide/shareable-configs) which required a module name change due to naming conventions.
+
 ### Why:
 
 This module provides shared [ESLint](http://eslint.org/) configuration files for [Foundry VTT](https://foundryvtt.com) / 
